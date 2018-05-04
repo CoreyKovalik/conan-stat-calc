@@ -143,38 +143,20 @@ function adjustAttrPoints(currentlevel) {
 }
 
 function adjustFeatPoints(currentlevel) {
-  if (currentlevel == 1) {
-    // stats.availableFeats = 0;
-    return null;
+  let i = 0, x = 1;
+  let comparelvl = 0;
+  let featPoints = 0;
+  while (i < 13) {
+    if (currentlevel < comparelvl + 5) {
+      featPoints ++;
+      while (x < 7) {
+        if (currentlevel == x * 10) return featPoints * 3;
+        x++;
+      }
+      return featPoints;
+    }
+    else i++, featPoints++, comparelvl += 5;
   }
-  else if (currentlevel == 10) return 9;
-  else if (currentlevel == 20) return 15;
-  else if (currentlevel == 30) return 21;
-  else if (currentlevel == 40) return 27;
-  else if (currentlevel == 50) return 33;
-  else if (currentlevel == 60) return 39;
-  else if (currentlevel < 5) return 1;
-  else if (currentlevel < 10) return 2;
-  else if (currentlevel < 15) return 3;
-  else if (currentlevel < 20) return 4;
-  else if (currentlevel < 25) return 5;
-  else if (currentlevel < 30) return 6;
-  else if (currentlevel < 35) return 7;
-  else if (currentlevel < 40) return 8;
-  else if (currentlevel < 45) return 9;
-  else if (currentlevel < 50) return 10;
-  else if (currentlevel < 55) return 11;
-  else if (currentlevel < 60) return 12;
-  else return null;
-
-//   let i = 0;
-//   let comparelvl = 0;
-//   let featPoints = 0;
-//   while (i < 13) {
-//     if (currentlevel < comparelvl + 5) return featPoints + 1;
-//     else if
-//     else i++, featPoints++, comparelvl += 5;
-//   }
 }
 
 //Checks current attributes and determines attribute bonuses @ lvls 10,20,30,40,50
