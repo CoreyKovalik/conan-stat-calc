@@ -119,17 +119,13 @@ function setCurrentExperience(currentlevel) {
 }
 
 function getAttrCost(currentlevel) {
-  if (currentlevel < 5) return 1;
-  else if (currentlevel < 10) return 2;
-  else if (currentlevel < 15) return 3;
-  else if (currentlevel < 20) return 4;
-  else if (currentlevel < 25) return 5;
-  else if (currentlevel < 30) return 6;
-  else if (currentlevel < 35) return 7;
-  else if (currentlevel < 40) return 8;
-  else if (currentlevel < 45) return 9;
-  else if (currentlevel < 50) return 10;
-  else return null;
+  let i = 0;
+  let comparelvl = 0;
+  let cost = 0;
+  while (i < 10) {
+    if (currentlevel < comparelvl + 5) return cost + 1;
+    else i++, cost++, comparelvl += 5;
+  }
 }
 
 function adjustAttrPoints(currentlevel) {
