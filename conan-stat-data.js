@@ -133,26 +133,13 @@ function getAttrCost(currentlevel) {
 }
 
 function adjustAttrPoints(currentlevel) {
-  if (currentlevel <= 5) return 1;
-  else if (currentlevel <= 10) return 2;
-  else if (currentlevel <= 15) return 3;
-  else if (currentlevel <= 20) return 4;
-  else if (currentlevel <= 25) return 5;
-  else if (currentlevel <= 30) return 6;
-  else if (currentlevel <= 35) return 7;
-  else if (currentlevel <= 40) return 8;
-  else if (currentlevel <= 45) return 9;
-  else if (currentlevel <= 50) return 10;
-  else if (currentlevel <= 55) return 11;
-  else if (currentlevel <= 60) return 12;
-  else return null;
-  // let i = 0;
-  // let comparelvl = 0;
-  // let attrPoints = 0;
-  // while (i < 13) {
-  //   if (currentlevel <= comparelvl + 5) return attrPoints + 1;
-  //   else i++, attrPoints++, comparelvl += 5;
-  // }
+  let i = 0;
+  let comparelvl = 0;
+  let attrPoints = 0;
+  while (i < 13) {
+    if (currentlevel <= comparelvl + 5) return attrPoints + 1;
+    else i++, attrPoints++, comparelvl += 5;
+  }
 }
 
 function adjustFeatPoints(currentlevel) {
