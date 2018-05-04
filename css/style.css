@@ -1,0 +1,187 @@
+/* Conan Stat Calculator */
+@import url('https://fonts.googleapis.com/css?family=Jomhuria');
+
+body {
+  background-image: url(../images/background.jpg);
+  color: #ddc271;
+  font-family: Jomhuria;
+  font-size: 30px;
+}
+
+h1#title {
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+}
+
+table {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+    /*background-color: black;*/
+/*    background-image: url(../images/tablebg.png);
+    background-size: 100% 100%;*/
+}
+
+th {
+  text-align: center;
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+li span:first-child {
+  display: table-cell;
+}
+
+li span:last-child {
+  display: table-cell;
+  width: 100%;
+  padding-left: 3px;
+  padding-right: 10%;
+}
+
+#character-title {
+  font-size: 1.5em;
+}
+
+.attribute, .current-level, .cost {
+  border: 0;
+}
+
+.attr-div {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.attribute {
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.current-level {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.cost {
+  padding-right: 10px;
+}
+
+.stat-button {
+  font-weight: bold;
+  font-size: 16px;
+  white-space: pre;
+}
+
+.experience {
+  min-width: 274px;
+}
+
+.player-stats {
+  width: 12%;
+/*  display:none;*/
+}
+
+.conanimg {
+  vertical-align: middle;
+  height:auto;
+  max-width: 100%;
+  border: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+/* PROGRESS BARS */
+.progress-bar-stat {
+  width: 60%;
+  display: table-cell;
+  background-image: url(../images/teir0.png);
+  background-size:100% 100%;
+  height: 30px;
+}
+
+.progress-bar {
+/*  display: inline-flex;
+  justify-content: space-between;*/
+  width: 0%;
+  background-color: rgba(221, 194, 150,.2);
+  position:relative;
+  left: -5px;
+  height: 12px;
+  /*top: 9px;*/
+  transition: .1s
+}
+
+.perk-1 {
+  background-image: url(../images/teir1.png);
+}
+.perk-2 {
+  background-image: url(../images/teir2.png);
+}
+.perk-3 {
+  background-image: url(../images/teir3.png);
+}
+.perk-4 {
+  background-image: url(../images/teir4.png);
+}
+.perk-5 {
+  background-image: url(../images/teir5.png);
+}
+
+.bonuses {
+  text-align: center;
+  font-style: italic;
+}
+
+#reset-all {
+  width: 33%
+}
+
+.reset {
+  text-align: center;
+}
+
+#health, #stamina, #encumbr-player, #melee,
+#ranged, #armor, #dmg-resist {
+  display: table-cell;
+  text-align: right;
+}
+
+.attribute
+
+#strength
+#agility
+#vitality
+#accuracy
+#grit
+#encumbrance
+#survival
+
+#str-cost
+#agi-cost
+#vit-cost
+#acc-cost
+#grit-cost
+#encumb-cost
+#surv-cost
+
+#health
+#stamina
+#encumbr-player
+#melee
+#ranged
+#armor
+#dmg-resist
+
+.current-level
