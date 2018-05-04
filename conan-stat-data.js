@@ -111,9 +111,6 @@ function resetAll() {
 }
 
 function setCurrentExperience(currentlevel) {
-  if (currentlevel < 1 || currentlevel > 60) {
-    return;
-  }
   stats.currentExperience = expArray[currentlevel - 1].toLocaleString() + " / " + expArray[currentlevel].toLocaleString();
   return expArray[currentlevel -1];
 }
