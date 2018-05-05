@@ -384,3 +384,18 @@ document.getElementById("survDown").addEventListener("mousedown", function() {
 
 //Reset button - all points and levels reverted to base values
 document.getElementById("reset-all").addEventListener("click", resetAll);
+document.getElementById("reset-attributes").addEventListener("click", resetAttributes);
+
+stats.allStats.forEach(function(attribute, i) {
+  document.getElementsByClassName("reset-attribute")[i].addEventListener("click", function() {
+    resetAttribute(stats.allStats[i]);
+  });
+});
+
+// why let works and var does not?
+
+// for (let i = 0; i < 7; i++) {
+//     document.getElementsByClassName("reset-attribute")[i].addEventListener("click", function() {
+//       resetAttribute(stats.allStats[i]);
+//   });
+// }

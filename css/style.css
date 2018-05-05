@@ -148,6 +148,10 @@ li span:last-child {
   width: 33%
 }
 
+#reset-attributes {
+  width: 16%;
+}
+
 .reset {
   text-align: center;
 }
