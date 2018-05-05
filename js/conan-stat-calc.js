@@ -382,7 +382,7 @@ document.getElementById("survDown").addEventListener("mousedown", function() {
   mouseHoldStatDown("survival");
 });
 
-//Reset button - all points and levels reverted to base values
+//Reset buttons - all points and levels reverted to base values
 document.getElementById("reset-all").addEventListener("click", resetAll);
 document.getElementById("reset-attributes").addEventListener("click", resetAttributes);
 
@@ -390,6 +390,14 @@ stats.allStats.forEach(function(attribute, i) {
   document.getElementsByClassName("reset-attribute")[i].addEventListener("click", function() {
     resetAttribute(stats.allStats[i]);
   });
+  document.getElementsByClassName("max-attribute")[i].addEventListener("click", function() {
+    maxOutAttribute(stats.allStats[i]);
+  });
+});
+
+document.getElementsByClassName("max-level")[0].addEventListener("click", function() {
+  maxOutLevel();
+  // document.getElementsByClassName("max-level")[0].classList.toggle("hide");
 });
 
 // why let works and var does not?

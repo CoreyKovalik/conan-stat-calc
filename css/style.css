@@ -50,6 +50,13 @@ li span:last-child {
   padding-right: 10%;
 }
 
+.hide {
+  display: none;
+}
+
+.disabled {
+}
+
 #character-title {
   font-size: 1.5em;
 }
