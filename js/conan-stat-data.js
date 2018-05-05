@@ -122,6 +122,19 @@ function resetAttribute(attribute) {
   }
 }
 
+function maxOutLevel() {
+  while (stats.characterLevel < 60) {
+    levelUp();
+  }
+}
+
+function maxOutAttribute(attribute) {
+  while (stats[attribute].value < 50) {
+    if (getAttrCost(stats[attribute].value) > stats.unspentPoints) return limitAlert("nopoints");
+    statUp(attribute);
+  }
+}
+
 function setCurrentExperience(currentlevel) {
   stats.currentExperience = expArray[currentlevel - 1].toLocaleString() + " / " + expArray[currentlevel].toLocaleString();
   return expArray[currentlevel -1];
