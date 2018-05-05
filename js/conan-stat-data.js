@@ -112,15 +112,14 @@ function resetAll() {
 
 function resetAttributes() {
   stats.allStats.forEach(function(attribute) {
-    // console.log(stats[attribute].value);
-    while (stats[attribute].value > 0) {
-      statDown(attribute);
-    }
+    resetAttribute(attribute);
   });
 }
 
 function resetAttribute(attribute) {
-
+  while (stats[attribute].value > 0) {
+    statDown(attribute);
+  }
 }
 
 function setCurrentExperience(currentlevel) {
