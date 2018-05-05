@@ -20,13 +20,26 @@ table {
   margin-right: auto;
 }
 
-table, th, td {
-    border: 1px solid white;
-    border-collapse: collapse;
-    padding: 5px;
-    /*background-color: black;*/
-/*    background-image: url(../images/tablebg.png);
-    background-size: 100% 100%;*/
+table, td {
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+tbody, td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+thead {
+  background-image: url(../images/BgTopBanner.png);
+  background-size: 100% 100%;
+/*  border-left: 1px solid grey;
+  border-right: 1px solid grey;*/
+}
+
+.bonuses {
+  background-image: url(../images/BgFeats.png);
+  background-size: 100% 100%;
 }
 
 th {
@@ -72,7 +85,6 @@ li span:last-child {
 }
 
 .attribute {
-  padding-left: 10px;
   text-transform: uppercase;
 }
 
@@ -89,6 +101,10 @@ li span:last-child {
   font-weight: bold;
   font-size: 16px;
   white-space: pre;
+}
+
+.stat-icon {
+  vertical-align: middle;
 }
 
 .experience {

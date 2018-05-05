@@ -51,7 +51,7 @@ let stamina_html = document.getElementById("stamina");
 stamina_html.appendChild(stamina_txt);
 
 let encumbr_player_html = document.getElementById("encumbr-player");
-    encumbr_player_html2 = document.getElementById("encumbr-player-2");
+    encumbr_player_html2 = document.getElementsByClassName("encumbrance-heading")[0];
     encumbr_player_txt = document.createTextNode(stats.playerStats.encumbrance.value);
     encumbr_player_txt2 = document.createTextNode(stats.playerStats.encumbrance.value);
 encumbr_player_html.appendChild(encumbr_player_txt);
