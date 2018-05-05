@@ -263,3 +263,8 @@ hr.bonuses {
 .bonuses {
   color: #ECE4C6;
 }
+
+.bonuses.agility, .bonuses.vitality, .bonuses.accuracy,
+.bonuses.grit, .bonuses.encumbrance, .bonuses.survival {
+  display: none;
+}
