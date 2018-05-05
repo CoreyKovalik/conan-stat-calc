@@ -110,14 +110,13 @@ function resetAll() {
   alert("All levels, stats, and points are reset.");
 }
 
-// function resetA() {
-//   stats.allStats.forEach(function(attribute) {
-//     // statDown(attribute);
-//   });
-// }
-
 function resetAttributes() {
-  console.log("hi");
+  stats.allStats.forEach(function(attribute) {
+    // console.log(stats[attribute].value);
+    while (stats[attribute].value > 0) {
+      statDown(attribute);
+    }
+  });
 }
 
 function resetAttribute(attribute) {
