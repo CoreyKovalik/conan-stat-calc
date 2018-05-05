@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Jomhuria');
 
 body {
+  margin-top: 0px;
+  margin-bottom: 0px;
   background-image: url(../images/background.jpg);
   color: #ddc271;
   font-family: Jomhuria;
@@ -37,7 +39,7 @@ thead {
   border-right: 1px solid grey;*/
 }
 
-.bonuses {
+td.bonuses {
   background-image: url(../images/BgFeats.png);
   background-size: 100% 100%;
 }
@@ -69,7 +71,7 @@ button {
   border-right: 0;
   border-top: 2px solid grey;
   border-bottom: 1px solid grey;
-  color: silver;
+  color: #ECE4C6;
   font-weight: bold;
 }
 
@@ -80,15 +82,6 @@ button#reset-all, button#reset-attributes {
 button:hover {
   background-image: url(../images/ButtonPressed.png);
   color: black;
-}
-
-.current-level
-
-.hide {
-  display: none;
-}
-
-.disabled {
 }
 
 #character-title {
@@ -202,8 +195,6 @@ button:hover {
 }
 
 .bonuses {
-  text-align: center;
-  font-style: italic;
 }
 
 #reset-all {
@@ -224,30 +215,51 @@ button:hover {
   text-align: right;
 }
 
-.attribute
+.container.bonuses {
+padding-right: 25px;
+}
 
-#strength
-#agility
-#vitality
-#accuracy
-#grit
-#encumbrance
-#survival
+.container.bonus-teir {
+  height: 100px;
+}
 
-#str-cost
-#agi-cost
-#vit-cost
-#acc-cost
-#grit-cost
-#encumb-cost
-#surv-cost
+.bonus-icon {
+  float: left;
+}
 
-#health
-#stamina
-#encumbr-player
-#melee
-#ranged
-#armor
-#dmg-resist
+.bonus-teir1, .bonus-teir2, .bonus-teir3,
+.bonus-teir4, .bonus-teir5 {
+  clear: left;
+  margin-top: -25px;
+}
 
-.current-level
+.bonus-content {
+  height: 100%;
+}
+
+.bonus-heading {
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.bonus-description {
+  text-align: center;
+}
+
+hr.bonuses {
+  margin-left: 20px;
+  display:block;
+  border:0px;
+  height:2px;
+  background-image:url(../images/hr.png);
+}
+
+.bonus-description, .bonus-content {
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+.bonuses {
+  color: #ECE4C6;
+}
