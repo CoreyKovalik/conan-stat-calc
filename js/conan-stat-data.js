@@ -200,6 +200,7 @@ function calcPlayerStats() {
   stats.playerStats.armor.value = (2 * stats.agility.value) + stats.playerStats.armor.base;
     if(stats.grit._30) stats.playerStats.armor.value += 15;
   stats.playerStats.damageResistance.value = stats.playerStats.armor.value * 0.003 * 100;
+    if(stats.encumbrance._30) stats.playerStats.encumbrance.value += stats.playerStats.encumbrance.value * .1;
 }
 
 function adjustProgress(statString) {
