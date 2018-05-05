@@ -63,6 +63,27 @@ li span:last-child {
   padding-right: 10%;
 }
 
+button {
+  background-image: url(../images/ButtonNormal.png);
+  border-left: 0;
+  border-right: 0;
+  border-top: 2px solid grey;
+  border-bottom: 1px solid grey;
+  color: silver;
+  font-weight: bold;
+}
+
+button#reset-all, button#reset-attributes {
+  background-size: cover;
+}
+
+button:hover {
+  background-image: url(../images/ButtonPressed.png);
+  color: black;
+}
+
+.current-level
+
 .hide {
   display: none;
 }
@@ -89,18 +110,36 @@ li span:last-child {
 }
 
 .current-level {
+  background-image: url(../images/StatField.png);
+  width: 68px;
+  background-size: 100% 100%;
   text-align: right;
   padding-right: 20px;
+  display: inline-block;
+  padding-top: 2px;
 }
 
 .cost {
   padding-right: 10px;
 }
 
+.reset-attribute, .max-attribute, .stat-button {
+  line-height: 25px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .stat-button {
   font-weight: bold;
   font-size: 16px;
   white-space: pre;
+  position: relative;
+  top: 1px;
+  width: 30px;
+}
+
+.max-attribute {
+  width: 48px;
 }
 
 .stat-icon {
