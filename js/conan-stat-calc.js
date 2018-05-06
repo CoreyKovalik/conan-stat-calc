@@ -386,6 +386,8 @@ document.getElementById("survDown").addEventListener("mousedown", function() {
 document.getElementById("reset-all").addEventListener("click", resetAll);
 document.getElementById("reset-attributes").addEventListener("click", resetAttributes);
 
+let currentActive = "strength";
+
 stats.allStats.forEach(function(attribute, i) {
   document.getElementsByClassName("reset-attribute")[i].addEventListener("click", function() {
     resetAttribute(stats.allStats[i]);
@@ -393,12 +395,24 @@ stats.allStats.forEach(function(attribute, i) {
   document.getElementsByClassName("max-attribute")[i].addEventListener("click", function() {
     maxOutAttribute(stats.allStats[i]);
   });
+
+  document.getElementsByClassName("attr-div " + stats.allStats[i])[0].addEventListener("mouseover", function() {
+    if (stats.allStats[i] != currentActive) {
+      document.getElementsByClassName("bonuses " + stats.allStats[i])[0].classList.add("active");
+      document.getElementsByClassName("bonuses " + currentActive)[0].classList.remove("active");
+      currentActive = stats.allStats[i];
+    }
+  });
+
+
+
 });
 
 document.getElementsByClassName("max-level")[0].addEventListener("click", function() {
   maxOutLevel();
   // document.getElementsByClassName("max-level")[0].classList.toggle("hide");
 });
+
 
 // why let works and var does not?
 

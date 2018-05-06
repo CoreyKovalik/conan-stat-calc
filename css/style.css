@@ -18,6 +18,7 @@ h1#title {
 
 table {
   width: 95%;
+  min-width: 1420px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -140,7 +141,7 @@ button:hover {
 }
 
 .experience {
-  min-width: 274px;
+  min-width: 502px;
 }
 
 .player-stats {
@@ -262,9 +263,13 @@ hr.bonuses {
 
 .bonuses {
   color: #ECE4C6;
+  padding: 0px;
 }
 
-.bonuses.agility, .bonuses.vitality, .bonuses.accuracy,
-.bonuses.grit, .bonuses.encumbrance, .bonuses.survival {
+.hide {
   display: none;
+}
+
+.active {
+  display: table-cell;
 }
