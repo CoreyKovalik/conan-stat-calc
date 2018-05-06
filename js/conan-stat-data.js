@@ -211,7 +211,14 @@ function adjustProgress(statString) {
 
   for (var i = 1; i <= 5; i++) {
     let teir = "_" + i + "0";
-    if (stats[statString][teir]) document.getElementById("progress-bar-" + statString).classList.add("perk-" + i);
-    else document.getElementById("progress-bar-" + statString).classList.remove("perk-" + i);
+    if (stats[statString][teir]) {
+      document.getElementById("progress-bar-" + statString).classList.add("perk-" + i);
+      document.getElementsByClassName("bonus-icon bonus-teir" + i + " " + statString)[0].setAttribute("src", "./images/t" + i + "-glow.png");
+    }
+    else {
+      document.getElementById("progress-bar-" + statString).classList.remove("perk-" + i);
+      document.getElementsByClassName("bonus-icon bonus-teir" + i + " " + statString)[0].setAttribute("src", "./images/t" + i + ".png");
+    }
+
   }
 }
