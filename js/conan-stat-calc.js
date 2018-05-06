@@ -396,15 +396,21 @@ stats.allStats.forEach(function(attribute, i) {
     maxOutAttribute(stats.allStats[i]);
   });
 
-  document.getElementsByClassName("attr-div " + stats.allStats[i])[0].addEventListener("mouseover", function() {
-    if (stats.allStats[i] != currentActive) {
+  //cache attr-div & progress-bar-stat for each attribute. then,
+  let hoverElementsForToggle = [];
+  hoverElementsForToggle[0] = document.getElementsByClassName("attr-div " + stats.allStats[i])[0]
+  hoverElementsForToggle[1] = document.getElementsByClassName("progress-bar-stat " + stats.allStats[i])[0]
+
+  // mouseover on hoverElements to toggle active class on current 'mouseover' attribute
+  hoverElementsForToggle.forEach(function(element) {
+    element.addEventListener("mouseover", function () {
+      if (stats.allStats[i] != currentActive) {
       document.getElementsByClassName("bonuses " + stats.allStats[i])[0].classList.add("active");
       document.getElementsByClassName("bonuses " + currentActive)[0].classList.remove("active");
       currentActive = stats.allStats[i];
-    }
+      }
+    });
   });
-
-
 
 });
 
