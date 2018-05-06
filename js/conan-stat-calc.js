@@ -58,11 +58,11 @@ encumbr_player_html.appendChild(encumbr_player_txt);
 encumbr_player_html2.appendChild(encumbr_player_txt2);
 
 let melee_html = document.getElementById("melee");
-    melee_txt = document.createTextNode(Math.round(stats.playerStats.melee.value));
+    melee_txt = document.createTextNode(Math.round(stats.playerStats.melee.value) + "%");
 melee_html.appendChild(melee_txt);
 
 let ranged_html = document.getElementById("ranged");
-    ranged_txt = document.createTextNode(Math.round(stats.playerStats.ranged.value));
+    ranged_txt = document.createTextNode(Math.round(stats.playerStats.ranged.value) + "%");
 ranged_html.appendChild(ranged_txt);
 
 let armor_html = document.getElementById("armor");
@@ -97,11 +97,11 @@ function adjustPlayerStats() {
   encumbr_player_html.appendChild(encumbr_player_txt);
 
   melee_html.removeChild(melee_txt);
-  melee_txt = document.createTextNode(Math.round(stats.playerStats.melee.value));
+  melee_txt = document.createTextNode(Math.round(stats.playerStats.melee.value) + "%");
   melee_html.appendChild(melee_txt);
 
   ranged_html.removeChild(ranged_txt);
-  ranged_txt = document.createTextNode(Math.round(stats.playerStats.ranged.value));
+  ranged_txt = document.createTextNode(Math.round(stats.playerStats.ranged.value) + "%");
   ranged_html.appendChild(ranged_txt);
 
   armor_html.removeChild(armor_txt);
