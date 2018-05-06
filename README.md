@@ -1,14 +1,16 @@
 # Conan Exiles Stat Calculator
-Sandbox for manipulating your character's base levels, stats, and attributes in this open source web app.
-Re-allocate all your points with ease!
+Made for use with the popular video game [Conan Exiles](https://www.conanexiles.com/)
 
-see:  [thrallbrowser](http://thrallbrowser.com)
+Interactive sandbox for manipulating your character's base levels, stats, and attributes in this open source web app.<br>
+Re-allocate all your points with ease, and create the perfect build for your exile!<br>
+
+see:  [thrallbrowser.com](http://thrallbrowser.com),<br>
 [thrallbrowser GitHub](http://github.com/Immotal/thrallbrowser)
 
-Recommended: see  [ServerThrall GitHub](http://github.com/nullsoldier/serverthrall) for Conan Exiles Server Management software!
+<b>Recommended</b>: see  [ServerThrall GitHub](http://github.com/nullsoldier/serverthrall) for Conan Exiles Server Management software!
 
---Made with raw JavaScript
---All math updated to Conan Exiles Update #33, 5/4/2018 pre-launch 5/8.
---Please feel free to contact me if stat caluclations do not match current verison of Conan Exiles
-<img src="https://raw.githubusercontent.com/Immotal/conan-stat-calc/master/design/conan-stat-calc-gif.gif" width="700" height="304">
-<img src="https://raw.githubusercontent.com/Immotal/conan-stat-calc/master/design/conan-stat-calc-WIP.png" width="700" height="383">
+--Made with raw JavaScript<br>
+--All math updated to Conan Exiles Update #33, 5/4/2018 pre-launch 5/8.<br>
+--Please feel free to contact me if stat caluclations do not match current verison of Conan Exiles<br>
+<img src="https://raw.githubusercontent.com/Immotal/conan-stat-calc/master/design/conan-stat-calc-gif.gif" width="800"><br>
+<img src="https://raw.githubusercontent.com/Immotal/conan-stat-calc/master/design/conan-stat-calc-WIP.png" width="800">
