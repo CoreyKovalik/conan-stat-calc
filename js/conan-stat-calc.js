@@ -157,28 +157,10 @@ function adjustPoints() {
   survival_html.appendChild(survival_txt);
 }
 
-// Alert helper function //
-  // alert on point limitations
-
-function limitAlert(event, level) {
-  switch (event) {
-    case "min":
-    alert("Minimum " + level + " level reached!");
-    break;
-    case "max":
-    alert("Maximum " + level + " level reached!");
-    clearInterval(mouseHoldInterval);
-    break;
-    case "nopoints":
-    alert("Not enough points!");
-    break;
-  }
-}
-
 // Increase/Decrease stat functions
 
 function levelUp() {
-  if (stats.characterLevel == 60) return limitAlert("max","exile");
+  if (stats.characterLevel == 60) return false;
   stats.characterLevel += 1;
   setCurrentExperience(stats.characterLevel);
   stats.unspentPoints += adjustAttrPoints(stats.characterLevel);
@@ -188,9 +170,13 @@ function levelUp() {
 }
 
 function levelDown() {
-  if (stats.characterLevel == 1) return limitAlert("min","exile");
+  if (stats.characterLevel == 1) return false;
+  if (stats.characterLevel == 60) {
+    document.getElementById("levelUp").disabled = false;
+    document.getElementsByClassName("max-level")[0].disabled = false;
+  }
   if (stats.unspentPoints < adjustAttrPoints(stats.characterLevel)) {
-    return alert("First remove attributes before leveling down your Exile!  You cannot remove what you've already spent!");
+    return alert("You must first remove attributes before leveling down your Exile.  You cannot remove what you've already spent!");
   }
   stats.unspentPoints -= adjustAttrPoints(stats.characterLevel);
   stats.availableFeats -= adjustFeatPoints(stats.characterLevel);
@@ -204,9 +190,9 @@ function statUp(statString) {
 let stat = stats[statString].value;
 let name = capitalizeFirst(statString);
 let cost = getAttrCost(stat);
-  if (stat == 50) return limitAlert("max", statString);
+  if (stat == 50) return false;
   else if (cost > stats.unspentPoints) {
-    return limitAlert("nopoints");
+    return false;
   }
   else {
     stat += 1;
@@ -220,7 +206,7 @@ let cost = getAttrCost(stat);
 
 function statDown(statString) {
   let stat = stats[statString].value;
-  if (stat === 0) return limitAlert("min", statString);
+  if (stat == 0) return false;
   else {
     stat -= 1;
     let name = capitalizeFirst(statString);

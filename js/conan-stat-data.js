@@ -107,7 +107,6 @@ function resetAll() {
   for (var i = 0; i < 7; i++) {
     update(stats.allStats[i]);
   }
-  alert("All levels, stats, and points are reset.");
 }
 
 function resetAttributes() {
@@ -130,7 +129,7 @@ function maxOutLevel() {
 
 function maxOutAttribute(attribute) {
   while (stats[attribute].value < 50) {
-    if (getAttrCost(stats[attribute].value) > stats.unspentPoints) return limitAlert("nopoints");
+    if (getAttrCost(stats[attribute].value) > stats.unspentPoints) return false;
     statUp(attribute);
   }
 }
