@@ -12,5 +12,5 @@ see:  [thrallbrowser.com](http://thrallbrowser.com),<br>
 --Made with raw JavaScript<br>
 --All math updated to Conan Exiles Update #33, 5/4/2018 pre-launch 5/8.<br>
 --Please feel free to contact me if stat caluclations do not match current verison of Conan Exiles<br>
-<img src="https://raw.githubusercontent.com/Immotal/conan-stat-calc/master/design/conan-stat-calc-gif.gif" width="800"><br>
-<img src="https://raw.githubusercontent.com/Immotal/conan-stat-calc/master/design/conan-stat-calc-WIP.png" width="800">
+<img src="https://raw.githubusercontent.com/Immotal/conan-stat-calc/master/design/conan-stat-calc-gif2.gif" width="800"><br>
+<img src="https://raw.githubusercontent.com/Immotal/conan-stat-calc/master/design/conan-stat-calc-WIP2.png" width="800">
