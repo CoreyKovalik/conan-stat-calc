@@ -1,75 +1,75 @@
 // Initial Points //
 
-let characterLevel_html = document.getElementById("characterLevel");
+let characterLevel_html = document.getElementsByClassName("character-level")[0];
     characterLevel_txt = document.createTextNode(stats.characterLevel);
 characterLevel_html.appendChild(characterLevel_txt);
 
-let unspentPoints_html = document.getElementById("unspentPoints");
+let unspentPoints_html = document.getElementsByClassName("unspent-points")[0];
     unspentPoints_txt = document.createTextNode(stats.unspentPoints);
 unspentPoints_html.appendChild(unspentPoints_txt);
 
-let currentExperience_html = document.getElementById("currentExperience");
+let currentExperience_html = document.getElementsByClassName("current-experience")[0];
     currentExperience_txt = document.createTextNode(stats.currentExperience);
 currentExperience_html.appendChild(currentExperience_txt);
 
-let strength_html = document.getElementById("strength");
+let strength_html = document.getElementsByClassName("strength current-level")[0];
     strength_txt = document.createTextNode(stats.strength.value);
 strength_html.appendChild(strength_txt);
 
-let agility_html = document.getElementById("agility");
+let agility_html = document.getElementsByClassName("agility current-level")[0];
     agility_txt = document.createTextNode(stats.agility.value);
 agility_html.appendChild(agility_txt);
 
-let vitality_html = document.getElementById("vitality");
+let vitality_html = document.getElementsByClassName("vitality current-level")[0];
     vitality_txt = document.createTextNode(stats.vitality.value);
 vitality_html.appendChild(vitality_txt);
 
-let accuracy_html = document.getElementById("accuracy");
+let accuracy_html = document.getElementsByClassName("accuracy current-level")[0];
     accuracy_txt = document.createTextNode(stats.accuracy.value);
 accuracy_html.appendChild(accuracy_txt);
 
-let grit_html = document.getElementById("grit");
+let grit_html = document.getElementsByClassName("grit current-level")[0];
     grit_txt = document.createTextNode(stats.grit.value);
 grit_html.appendChild(grit_txt);
 
-let encumbrance_html = document.getElementById("encumbrance");
+let encumbrance_html = document.getElementsByClassName("encumbrance current-level")[0];
     encumbrance_txt = document.createTextNode(stats.encumbrance.value);
 encumbrance_html.appendChild(encumbrance_txt);
 
-let survival_html = document.getElementById("survival");
+let survival_html = document.getElementsByClassName("survival current-level")[0];
     survival_txt = document.createTextNode(stats.survival.value);
 survival_html.appendChild(survival_txt);
 
 // Initial playerStats //
 
-let health_html = document.getElementById("health");
+let health_html = document.getElementsByClassName("health")[0];
     health_txt = document.createTextNode(stats.playerStats.health.value);
 health_html.appendChild(health_txt);
 
-let stamina_html = document.getElementById("stamina");
+let stamina_html = document.getElementsByClassName("stamina")[0];
     stamina_txt = document.createTextNode(stats.playerStats.stamina.value);
 stamina_html.appendChild(stamina_txt);
 
-let encumbr_player_html = document.getElementById("encumbr-player");
+let encumbr_player_html = document.getElementsByClassName("encumbrance-player")[0];
     encumbr_player_html2 = document.getElementsByClassName("encumbrance-heading")[0];
     encumbr_player_txt = document.createTextNode(stats.playerStats.encumbrance.value);
     encumbr_player_txt2 = document.createTextNode(stats.playerStats.encumbrance.value);
 encumbr_player_html.appendChild(encumbr_player_txt);
 encumbr_player_html2.appendChild(encumbr_player_txt2);
 
-let melee_html = document.getElementById("melee");
+let melee_html = document.getElementsByClassName("melee")[0];
     melee_txt = document.createTextNode(Math.round(stats.playerStats.melee.value) + "%");
 melee_html.appendChild(melee_txt);
 
-let ranged_html = document.getElementById("ranged");
+let ranged_html = document.getElementsByClassName("ranged")[0];
     ranged_txt = document.createTextNode(Math.round(stats.playerStats.ranged.value) + "%");
 ranged_html.appendChild(ranged_txt);
 
-let armor_html = document.getElementById("armor");
+let armor_html = document.getElementsByClassName("armor")[0];
     armor_txt = document.createTextNode(stats.playerStats.armor.value);
 armor_html.appendChild(armor_txt);
 
-let dmg_resist_html = document.getElementById("dmg-resist");
+let dmg_resist_html = document.getElementsByClassName("dmg-resist")[0];
     dmg_resist_txt = document.createTextNode(precisionRound(stats.playerStats.damageResistance.value, 1) + "%");
 dmg_resist_html.appendChild(dmg_resist_txt);
 
@@ -172,7 +172,7 @@ function levelUp() {
 function levelDown() {
   if (stats.characterLevel == 1) return false;
   if (stats.characterLevel == 60) {
-    document.getElementById("levelUp").disabled = false;
+    document.getElementsByClassName("level-up")[0].disabled = false;
     document.getElementsByClassName("max-level")[0].disabled = false;
   }
   if (stats.unspentPoints < adjustAttrPoints(stats.characterLevel)) {
@@ -261,116 +261,116 @@ for (let button of statButtons) {
 
 //Event Listeners on all buttons top to bottom //
   //character level
-document.getElementById("levelUp").addEventListener("click", levelUp);
-document.getElementById("levelUp").addEventListener("mousedown", function() {
+document.getElementsByClassName("level-up")[0].addEventListener("click", levelUp);
+document.getElementsByClassName("level-up")[0].addEventListener("mousedown", function() {
   mouseHold(levelUp);
 });
-document.getElementById("levelDown").addEventListener("click", levelDown);
-document.getElementById("levelDown").addEventListener("mousedown", function() {
+document.getElementsByClassName("level-down")[0].addEventListener("click", levelDown);
+document.getElementsByClassName("level-down")[0].addEventListener("mousedown", function() {
   mouseHold(levelDown);
 });
 
   //strength level
-document.getElementById("strUp").addEventListener("click", function() {
+document.getElementsByClassName("strength-up")[0].addEventListener("click", function() {
   statUp("strength");
 });
-document.getElementById("strUp").addEventListener("mousedown", function() {
+document.getElementsByClassName("strength-up")[0].addEventListener("mousedown", function() {
   mouseHoldStatUp("strength");
 });
-document.getElementById("strDown").addEventListener("click", function() {
+document.getElementsByClassName("strength-down")[0].addEventListener("click", function() {
   statDown("strength");
 });
-document.getElementById("strDown").addEventListener("mousedown", function() {
+document.getElementsByClassName("strength-down")[0].addEventListener("mousedown", function() {
   mouseHoldStatDown("strength");
 });
 
   //agility level
-document.getElementById("agiUp").addEventListener("click", function() {
+document.getElementsByClassName("agility-up")[0].addEventListener("click", function() {
   statUp("agility");
 });
-document.getElementById("agiUp").addEventListener("mousedown", function() {
+document.getElementsByClassName("agility-up")[0].addEventListener("mousedown", function() {
   mouseHoldStatUp("agility");
 });
-document.getElementById("agiDown").addEventListener("click", function() {
+document.getElementsByClassName("agility-down")[0].addEventListener("click", function() {
   statDown("agility");
 });
-document.getElementById("agiDown").addEventListener("mousedown", function() {
+document.getElementsByClassName("agility-down")[0].addEventListener("mousedown", function() {
   mouseHoldStatDown("agility");
 });
 
   //vitality
-document.getElementById("vitUp").addEventListener("click", function() {
+document.getElementsByClassName("vitality-up")[0].addEventListener("click", function() {
   statUp("vitality");
 });
-document.getElementById("vitUp").addEventListener("mousedown", function() {
+document.getElementsByClassName("vitality-up")[0].addEventListener("mousedown", function() {
   mouseHoldStatUp("vitality");
 });
-document.getElementById("vitDown").addEventListener("click", function() {
+document.getElementsByClassName("vitality-down")[0].addEventListener("click", function() {
   statDown("vitality");
 });
-document.getElementById("vitDown").addEventListener("mousedown", function() {
+document.getElementsByClassName("vitality-down")[0].addEventListener("mousedown", function() {
   mouseHoldStatDown("vitality");
 });
 
   //accuracy
-document.getElementById("accUp").addEventListener("click", function() {
+document.getElementsByClassName("accuracy-up")[0].addEventListener("click", function() {
   statUp("accuracy");
 });
-document.getElementById("accUp").addEventListener("mousedown", function() {
+document.getElementsByClassName("accuracy-up")[0].addEventListener("mousedown", function() {
   mouseHoldStatUp("accuracy");
 });
-document.getElementById("accDown").addEventListener("click", function() {
+document.getElementsByClassName("accuracy-down")[0].addEventListener("click", function() {
   statDown("accuracy");
 });
-document.getElementById("accDown").addEventListener("mousedown", function() {
+document.getElementsByClassName("accuracy-down")[0].addEventListener("mousedown", function() {
   mouseHoldStatDown("accuracy");
 });
 
   //grit
-document.getElementById("gritUp").addEventListener("click", function() {
+document.getElementsByClassName("grit-up")[0].addEventListener("click", function() {
   statUp("grit");
 });
-document.getElementById("gritUp").addEventListener("mousedown", function() {
+document.getElementsByClassName("grit-up")[0].addEventListener("mousedown", function() {
   mouseHoldStatUp("grit");
 });
-document.getElementById("gritDown").addEventListener("click", function() {
+document.getElementsByClassName("grit-down")[0].addEventListener("click", function() {
   statDown("grit");
 });
-document.getElementById("gritDown").addEventListener("mousedown", function() {
+document.getElementsByClassName("grit-down")[0].addEventListener("mousedown", function() {
   mouseHoldStatDown("grit");
 });
 
   //encumbrance
-document.getElementById("encumbUp").addEventListener("click", function() {
+document.getElementsByClassName("encumbrance-up")[0].addEventListener("click", function() {
   statUp("encumbrance");
 });
-document.getElementById("encumbUp").addEventListener("mousedown", function() {
+document.getElementsByClassName("encumbrance-up")[0].addEventListener("mousedown", function() {
   mouseHoldStatUp("encumbrance");
 });
-document.getElementById("encumbDown").addEventListener("click", function() {
+document.getElementsByClassName("encumbrance-down")[0].addEventListener("click", function() {
   statDown("encumbrance");
 });
-document.getElementById("encumbDown").addEventListener("mousedown", function() {
+document.getElementsByClassName("encumbrance-down")[0].addEventListener("mousedown", function() {
   mouseHoldStatDown("encumbrance");
 });
 
   //survival
-document.getElementById("survUp").addEventListener("click", function() {
+document.getElementsByClassName("survival-up")[0].addEventListener("click", function() {
   statUp("survival");
 });
-document.getElementById("survUp").addEventListener("mousedown", function() {
+document.getElementsByClassName("survival-up")[0].addEventListener("mousedown", function() {
   mouseHoldStatUp("survival");
 });
-document.getElementById("survDown").addEventListener("click", function() {
+document.getElementsByClassName("survival-down")[0].addEventListener("click", function() {
   statDown("survival");
 });
-document.getElementById("survDown").addEventListener("mousedown", function() {
+document.getElementsByClassName("survival-down")[0].addEventListener("mousedown", function() {
   mouseHoldStatDown("survival");
 });
 
 //Reset buttons - all points and levels reverted to base values
-document.getElementById("reset-all").addEventListener("click", resetAll);
-document.getElementById("reset-attributes").addEventListener("click", resetAttributes);
+document.getElementsByClassName("reset-all")[0].addEventListener("click", resetAll);
+document.getElementsByClassName("reset-attributes")[0].addEventListener("click", resetAttributes);
 
 let currentActive = "strength";
 
@@ -382,10 +382,10 @@ stats.allStats.forEach(function(attribute, i) {
     maxOutAttribute(stats.allStats[i]);
   });
 
-  //cache attr-div & progress-bar-stat for each attribute. then,
+  //cache attr-div & progress-bar for each attribute. then,
   let hoverElementsForToggle = [];
   hoverElementsForToggle[0] = document.getElementsByClassName("attr-div " + stats.allStats[i])[0]
-  hoverElementsForToggle[1] = document.getElementsByClassName("progress-bar-stat " + stats.allStats[i])[0]
+  hoverElementsForToggle[1] = document.getElementsByClassName("progress-bar " + stats.allStats[i])[0]
 
   // mouseover on hoverElements to toggle active class on current 'mouseover' attribute
   hoverElementsForToggle.forEach(function(element) {

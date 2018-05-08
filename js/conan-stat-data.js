@@ -206,16 +206,16 @@ function adjustProgress(statString) {
   if (statString == null) return false;
 
   let statProgress = (stats[statString].value / 50) * 100;
-  document.getElementById("progress-" + statString).setAttribute("style", "width:" + statProgress + "%;");
+  document.getElementsByClassName("progress " + statString)[0].setAttribute("style", "width:" + statProgress + "%;");
 
   for (var i = 1; i <= 5; i++) {
     let teir = "_" + i + "0";
     if (stats[statString][teir]) {
-      document.getElementById("progress-bar-" + statString).classList.add("perk-" + i);
+      document.getElementsByClassName("progress-bar " + statString)[0].classList.add("perk-" + i);
       document.getElementsByClassName("bonus-icon bonus-teir" + i + " " + statString)[0].setAttribute("src", "./images/t" + i + "-glow.png");
     }
     else {
-      document.getElementById("progress-bar-" + statString).classList.remove("perk-" + i);
+      document.getElementsByClassName("progress-bar " + statString)[0].classList.remove("perk-" + i);
       document.getElementsByClassName("bonus-icon bonus-teir" + i + " " + statString)[0].setAttribute("src", "./images/t" + i + ".png");
     }
 
