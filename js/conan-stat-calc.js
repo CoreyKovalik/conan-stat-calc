@@ -171,6 +171,10 @@ document.getElementsByClassName("max-level")[0].addEventListener("click", functi
   maxOutLevel();
 });
 
+//Reset buttons - all points and levels reverted to base values  +function createStatButtons(stat) {
+document.getElementsByClassName("reset-all")[0].addEventListener("click", resetAll);
+document.getElementsByClassName("reset-attributes")[0].addEventListener("click", resetAttributes);
+
 function createStatButtons(stat) {
   document.getElementsByClassName(stat + "-up")[0].addEventListener("click", statUp.bind(null, stat));
   document.getElementsByClassName(stat + "-up")[0].addEventListener("mousedown", mouseHoldStatUp.bind(null, stat));
