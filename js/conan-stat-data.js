@@ -218,6 +218,5 @@ function adjustProgress(statString) {
       document.getElementsByClassName("progress-bar " + statString)[0].classList.remove("perk-" + i);
       document.getElementsByClassName("bonus-icon bonus-teir" + i + " " + statString)[0].setAttribute("src", "./images/t" + i + ".png");
     }
-
   }
 }

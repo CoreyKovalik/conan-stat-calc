@@ -1,4 +1,5 @@
 // better image preloading @ https://perishablepress.com/press/2009/12/28/3-ways-preload-images-css-javascript-ajax/
+// pre-loaded for prettier rendering when transitioning between attribute teirs
 function preloader() {
   if (document.images) {
     var img1 = new Image();
