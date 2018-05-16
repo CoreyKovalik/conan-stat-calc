@@ -275,12 +275,12 @@ body {
   font-size: 18px;
 }
 
-.conan-stat-calculator .hide {
-  display: none;
-}
-
 .conan-stat-calculator .calc-table .calc-tbody .active {
   display: table-cell;
+}
+
+.conan-stat-calculator .hide {
+  display: none;
 }
 
 /* END BONUSES*/
@@ -288,7 +288,11 @@ body {
 /* MEDIA QUERIES */
 
 @media (max-width: 943px) {
-  .conan-stat-calculator .calc-table .encumbrance-heading,
+  .conan-stat-calculator .calc-table .calc-tbody .active {
+  display: none;
+  }
+
+  .conan-stat-calculator .calc-table .encumbrance-th,
   .conan-stat-calculator .calc-table .movement-penalty,
   .conan-stat-calculator .calc-table .experience,
   .conan-stat-calculator .calc-table .player-stats,
