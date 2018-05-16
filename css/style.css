@@ -224,27 +224,27 @@ body {
 
 /* BONUSES */
 
-.bonuses {
+.calc-table .bonuses {
   color: #ECE4C6;
   padding: 0;
 }
 
-.bonuses-container {
+.calc-table .bonuses-container {
   height: 619px;
   padding-right: 25px;
 }
 
-.bonus-heading {
+.calc-table .bonus-heading {
   text-align: center;
   font-size: 1.5em;
   text-transform: uppercase;
 }
 
-.bonus-description {
+.calc-table .bonus-description {
   text-align: center;
 }
 
-.bonuses-hr {
+.calc-table .bonuses-hr {
   margin-left: 20px;
   display:block;
   border:0;
@@ -252,34 +252,34 @@ body {
   background-image:url(../images/hr.png);
 }
 
-.bonus-container {
+.calc-table .bonus-container {
   height: 100px;
 }
 
-.bonus-icon {
+.calc-table .bonus-icon {
   float: left;
 }
 
-.bonus-teir1, .bonus-teir2, .bonus-teir3,
-.bonus-teir4, .bonus-teir5 {
+.calc-table .bonus-teir1, .calc-table .bonus-teir2, .calc-table .bonus-teir3,
+.calc-table .bonus-teir4, .calc-table .bonus-teir5 {
   clear: left;
   margin-top: -25px;
 }
 
-.bonus-content {
+.calc-table .bonus-content {
   height: 100%;
 }
 
-.bonus-description, .bonus-content {
+.calc-table .bonus-description, .calc-table .bonus-content {
   font-family: Helvetica;
   font-size: 18px;
 }
 
-.hide {
+.conan-stat-calculator .hide {
   display: none;
 }
 
-.active {
+.conan-stat-calculator .calc-table .calc-tbody .active {
   display: table-cell;
 }
 
